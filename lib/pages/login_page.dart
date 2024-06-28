@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class FirstPage extends StatelessWidget {
-  const FirstPage({super.key});
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +24,28 @@ class ColoredBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const SizedBox(
-      width: 896,
-      height: 960,
-      child: DecoratedBox(
-          decoration: BoxDecoration(color: Color.fromARGB(255, 7, 57, 60))),
-    );
+        width: 896,
+        height: 960,
+        child: DecoratedBox(
+          decoration: BoxDecoration(color: Color.fromARGB(255, 7, 57, 60)),
+          child: Padding(
+              padding: EdgeInsets.all(16.0),
+              child: Column(children: [
+                Text('Log In to your Account',
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 85, 214, 190),
+                        fontSize: 24,
+                        decoration: TextDecoration.none))
+              ])),
+        ));
+  }
+}
+
+class InputLabelBlock extends StatelessWidget {
+  const InputLabelBlock({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
