@@ -15,13 +15,13 @@ class LoginPage extends StatelessWidget {
           ),
         ),
         child: const Center(
-          child: ColoredBlock(),
+          child: LoginColoredBlock(),
         ));
   }
 }
 
-class ColoredBlock extends StatelessWidget {
-  const ColoredBlock({super.key});
+class LoginColoredBlock extends StatelessWidget {
+  const LoginColoredBlock({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,22 +33,28 @@ class ColoredBlock extends StatelessWidget {
           child: Padding(
               padding: EdgeInsets.all(16.0),
               child: Column(children: [
+                Image(
+                  image: AssetImage('wealthwave_logo_turqoise.png'),
+                  width: 150,
+                  height: 150,
+                ),
+                SizedBox(height: 30),
                 Text('Log In to your Account',
                     style: TextStyle(
                         color: Color.fromARGB(255, 85, 214, 190),
                         fontSize: 42,
                         decoration: TextDecoration.none)),
-                SizedBox(height: 10),
+                SizedBox(height: 70),
                 InputLabelBlock(
                   labelText: 'Email',
                   bodyText: 'Type your email address...',
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 20),
                 InputLabelBlock(
                   labelText: 'Password',
                   bodyText: 'Type your password...',
                 ),
-                SizedBox(height: 10),
+                SizedBox(height: 20),
                 LoginButton(),
               ])),
         ));
@@ -66,18 +72,21 @@ class InputLabelBlock extends StatelessWidget {
     return Material(
       color: Colors.transparent,
       child: TextField(
-        style: TextStyle(color: Color.fromARGB(255, 85, 214, 190)),
+        style:
+            TextStyle(fontSize: 30, color: Color.fromARGB(255, 85, 214, 190)),
         decoration: InputDecoration(
           enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color.fromARGB(255, 85, 214, 190))),
+              borderSide: BorderSide(
+                  width: 2, color: Color.fromARGB(255, 85, 214, 190))),
           focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color.fromARGB(255, 85, 214, 190))),
+              borderSide: BorderSide(
+                  width: 2, color: Color.fromARGB(255, 85, 214, 190))),
           hintText: bodyText,
           hintStyle:
-              TextStyle(color: Color.fromARGB(255, 85, 214, 190), fontSize: 16),
+              TextStyle(color: Color.fromARGB(255, 85, 214, 190), fontSize: 32),
           labelText: labelText,
           labelStyle:
-              TextStyle(color: Color.fromARGB(255, 85, 214, 190), fontSize: 16),
+              TextStyle(color: Color.fromARGB(255, 85, 214, 190), fontSize: 32),
         ),
       ),
     );
@@ -90,8 +99,8 @@ class LoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        width: 200,
-        height: 40,
+        width: 400,
+        height: 65,
         child: ElevatedButton(
           onPressed: () {},
           style: ElevatedButton.styleFrom(
@@ -103,7 +112,7 @@ class LoginButton extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               color: Color.fromARGB(255, 7, 57, 60),
-              fontSize: 30,
+              fontSize: 45,
               fontWeight: FontWeight.bold,
             ),
           ),
