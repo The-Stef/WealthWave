@@ -34,8 +34,9 @@ class ColoredBlock extends StatelessWidget {
                 Text('Log In to your Account',
                     style: TextStyle(
                         color: Color.fromARGB(255, 85, 214, 190),
-                        fontSize: 24,
-                        decoration: TextDecoration.none))
+                        fontSize: 42,
+                        decoration: TextDecoration.none)),
+                LoginButton()
               ])),
         ));
   }
@@ -47,5 +48,17 @@ class InputLabelBlock extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Placeholder();
+  }
+}
+
+class LoginButton extends StatelessWidget {
+  const LoginButton({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ElevatedButton(
+      onPressed: () {},
+      child: Text('Press me'),
+    );
   }
 }
