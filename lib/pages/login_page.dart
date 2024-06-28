@@ -36,7 +36,10 @@ class ColoredBlock extends StatelessWidget {
                         color: Color.fromARGB(255, 85, 214, 190),
                         fontSize: 42,
                         decoration: TextDecoration.none)),
-                LoginButton()
+                SizedBox(height: 10),
+                InputLabelBlock(),
+                SizedBox(height: 10),
+                LoginButton(),
               ])),
         ));
   }
@@ -47,7 +50,17 @@ class InputLabelBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Material(
+        child: Column(
+      children: [
+        Text('Email'),
+        TextField(
+            decoration: InputDecoration(
+          border: OutlineInputBorder(),
+          hintText: 'Enter a search term',
+        )),
+      ],
+    ));
   }
 }
 
@@ -61,19 +74,19 @@ class LoginButton extends StatelessWidget {
         height: 40,
         child: ElevatedButton(
           onPressed: () {},
+          style: ElevatedButton.styleFrom(
+              backgroundColor: Color.fromARGB(255, 85, 214, 190),
+              shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(12))),
           child: Text(
             'Log In',
+            textAlign: TextAlign.center,
             style: TextStyle(
               color: Color.fromARGB(255, 7, 57, 60),
               fontSize: 30,
               fontWeight: FontWeight.bold,
             ),
-            textAlign: TextAlign.center,
           ),
-          style: ElevatedButton.styleFrom(
-              backgroundColor: Color.fromARGB(255, 85, 214, 190),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12))),
         ));
   }
 }
