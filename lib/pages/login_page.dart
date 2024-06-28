@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -37,7 +39,15 @@ class ColoredBlock extends StatelessWidget {
                         fontSize: 42,
                         decoration: TextDecoration.none)),
                 SizedBox(height: 10),
-                InputLabelBlock(),
+                InputLabelBlock(
+                  labelText: 'Email',
+                  bodyText: 'Type your email address...',
+                ),
+                SizedBox(height: 10),
+                InputLabelBlock(
+                  labelText: 'Password',
+                  bodyText: 'Type your password...',
+                ),
                 SizedBox(height: 10),
                 LoginButton(),
               ])),
@@ -46,21 +56,31 @@ class ColoredBlock extends StatelessWidget {
 }
 
 class InputLabelBlock extends StatelessWidget {
-  const InputLabelBlock({super.key});
+  final String labelText, bodyText;
+
+  const InputLabelBlock(
+      {super.key, required this.labelText, required this.bodyText});
 
   @override
   Widget build(BuildContext context) {
-    return const Material(
-        child: Column(
-      children: [
-        Text('Email'),
-        TextField(
-            decoration: InputDecoration(
-          border: OutlineInputBorder(),
-          hintText: 'Enter a search term',
-        )),
-      ],
-    ));
+    return Material(
+      color: Colors.transparent,
+      child: TextField(
+        style: TextStyle(color: Color.fromARGB(255, 85, 214, 190)),
+        decoration: InputDecoration(
+          enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Color.fromARGB(255, 85, 214, 190))),
+          focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Color.fromARGB(255, 85, 214, 190))),
+          hintText: bodyText,
+          hintStyle:
+              TextStyle(color: Color.fromARGB(255, 85, 214, 190), fontSize: 16),
+          labelText: labelText,
+          labelStyle:
+              TextStyle(color: Color.fromARGB(255, 85, 214, 190), fontSize: 16),
+        ),
+      ),
+    );
   }
 }
 
