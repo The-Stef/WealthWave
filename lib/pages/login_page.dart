@@ -59,6 +59,10 @@ class LoginColoredBlock extends StatelessWidget {
                 LoginButton(),
                 SizedBox(height: 20),
                 ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        backgroundColor: Color.fromARGB(255, 0, 102, 204)),
                     onPressed: () {
                       Navigator.pushReplacement(
                           context,
@@ -69,7 +73,13 @@ class LoginColoredBlock extends StatelessWidget {
                             reverseTransitionDuration: Duration.zero,
                           ));
                     },
-                    child: Text('No account? Sign up now.'))
+                    child: Text(
+                      'No account? Sign Up.',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 7, 57, 60),
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
+                    ))
               ])),
         ));
   }

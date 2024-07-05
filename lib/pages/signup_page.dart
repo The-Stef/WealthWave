@@ -69,6 +69,10 @@ class SignupColoredBlock extends StatelessWidget {
                 RegisterButton(),
                 SizedBox(height: 20),
                 ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        backgroundColor: Color.fromARGB(255, 0, 102, 204)),
                     onPressed: () {
                       Navigator.pushReplacement(
                           context,
@@ -79,7 +83,13 @@ class SignupColoredBlock extends StatelessWidget {
                             reverseTransitionDuration: Duration.zero,
                           ));
                     },
-                    child: Text('Already have an account? Log in.'))
+                    child: Text(
+                      'Already have an account? Log In.',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 7, 57, 60),
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold),
+                    )),
               ])),
         ));
   }
