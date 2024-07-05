@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:wealthwave/pages/login_page.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
@@ -69,7 +70,14 @@ class SignupColoredBlock extends StatelessWidget {
                 SizedBox(height: 20),
                 ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/');
+                      Navigator.pushReplacement(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation1, animation2) =>
+                                LoginPage(),
+                            transitionDuration: Duration.zero,
+                            reverseTransitionDuration: Duration.zero,
+                          ));
                     },
                     child: Text('Already have an account? Log in.'))
               ])),
