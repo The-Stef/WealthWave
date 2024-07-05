@@ -25,7 +25,7 @@ class LoginColoredBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SizedBox(
+    return SizedBox(
         width: 896,
         height: 960,
         child: DecoratedBox(
@@ -56,6 +56,12 @@ class LoginColoredBlock extends StatelessWidget {
                 ),
                 SizedBox(height: 20),
                 LoginButton(),
+                SizedBox(height: 20),
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/signup');
+                    },
+                    child: Text('No account? Sign up now.'))
               ])),
         ));
   }

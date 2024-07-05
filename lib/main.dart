@@ -1,6 +1,8 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:wealthwave/pages/login_page.dart';
-// import 'package:wealthwave/pages/signup_page.dart';
+import 'package:wealthwave/pages/signup_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,9 +13,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => LoginPage(),
+        '/signup': (context) => SignupPage(),
+      },
     );
   }
 }
