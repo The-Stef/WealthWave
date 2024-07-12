@@ -40,8 +40,8 @@ class DashboardPage extends StatelessWidget {
                     },
                     icon: Image.asset(
                       'logout.png',
-                      width: 24, // Adjust size as needed
-                      height: 24, // Adjust size as needed
+                      width: 24,
+                      height: 24,
                     ),
                     label: Text(
                       'Log Out',
@@ -54,6 +54,33 @@ class DashboardPage extends StatelessWidget {
                             Color.fromARGB(255, 7, 57, 60))),
                   ),
                 ),
+                Positioned(
+                    top: 40,
+                    left: 400,
+                    child: Container(
+                        width: 300.0,
+                        height: 300.0,
+                        decoration: BoxDecoration(
+                          color: Color.fromARGB(255, 7, 57, 60),
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: Color.fromARGB(255, 85, 214, 190),
+                            width: 4.0,
+                          ),
+                        ),
+                        child: ClipOval(
+                            child: Align(
+                          alignment: Alignment.center,
+                          child: Padding(
+                            padding: EdgeInsets.all(60),
+                            child: Image.asset(
+                              'question.png',
+                              fit: BoxFit.contain,
+                              width: 200,
+                              height: 200,
+                            ),
+                          ),
+                        )))),
               ],
             ),
           ),
