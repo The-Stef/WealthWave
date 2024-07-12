@@ -11,6 +11,16 @@ class DashboardPage extends StatelessWidget {
         image: AssetImage('wealthwave_background.png'),
         fit: BoxFit.fill,
       )),
+      child: const Align(
+        alignment: Alignment.topCenter,
+        child: SizedBox(
+          height: 384,
+          width: 1950,
+          child: DecoratedBox(
+            decoration: BoxDecoration(color: Color.fromARGB(255, 7, 57, 60)),
+          ),
+        ),
+      ),
     );
   }
 }
