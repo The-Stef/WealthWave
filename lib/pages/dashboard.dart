@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -23,19 +24,24 @@ class DashboardPage extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                  top: 10,
-                  left: 10,
-                  child: ElevatedButton(
+                  top: 20,
+                  right: 5,
+                  child: ElevatedButton.icon(
                     onPressed: () {},
-                    child: Text('Button 1'),
-                  ),
-                ),
-                Positioned(
-                  top: 10,
-                  right: 10,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text('Button 2'),
+                    icon: Image.asset(
+                      'logout.png',
+                      width: 24, // Adjust size as needed
+                      height: 24, // Adjust size as needed
+                    ),
+                    label: Text(
+                      'Log Out',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 85, 214, 190),
+                          fontSize: 24),
+                    ),
+                    style: ButtonStyle(
+                        backgroundColor: WidgetStateProperty.all(
+                            Color.fromARGB(255, 7, 57, 60))),
                   ),
                 ),
               ],

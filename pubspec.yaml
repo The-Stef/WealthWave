@@ -55,6 +55,8 @@ flutter:
   assets:
     - assets/wealthwave_background.png 
     - assets/wealthwave_logo_turqoise.png
+    - assets/logout.png
+    - assets/settings.png
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
