@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -81,6 +81,31 @@ class DashboardPage extends StatelessWidget {
                             ),
                           ),
                         )))),
+                Positioned(
+                  top: 100,
+                  left: 800,
+                  child: Column(
+                    children: [
+                      Text(
+                        'WealthWave',
+                        style: TextStyle(
+                          fontSize: 128,
+                          color: Color.fromARGB(255, 85, 214, 190),
+                          decoration: TextDecoration.none,
+                        ),
+                      ),
+                      Text(
+                        'Your Personal Finance Website',
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          fontSize: 24,
+                          color: Color.fromARGB(255, 85, 214, 190),
+                          decoration: TextDecoration.none,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ],
             ),
           ),
