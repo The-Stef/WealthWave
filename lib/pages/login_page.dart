@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:wealthwave/pages/dashboard.dart';
 import 'package:wealthwave/pages/signup_page.dart';
 
 class LoginPage extends StatelessWidget {
@@ -126,7 +127,18 @@ class LoginButton extends StatelessWidget {
         width: 400,
         height: 65,
         child: ElevatedButton(
-          onPressed: () {},
+          // For the moment, this redirects straight to dashboard
+          //TODO: add login capabilities
+          onPressed: () {
+            Navigator.pushReplacement(
+                context,
+                PageRouteBuilder(
+                  pageBuilder: (context, animation1, animation2) =>
+                      DashboardPage(),
+                  transitionDuration: Duration.zero,
+                  reverseTransitionDuration: Duration.zero,
+                ));
+          },
           style: ElevatedButton.styleFrom(
               backgroundColor: Color.fromARGB(255, 85, 214, 190),
               shape: RoundedRectangleBorder(

@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:wealthwave/pages/login_page.dart';
 import 'package:wealthwave/pages/signup_page.dart';
+import 'package:wealthwave/pages/dashboard.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +20,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => LoginPage(),
         '/signup': (context) => SignupPage(),
+        '/dashboard': (context) => DashboardPage(),
       },
     );
   }
