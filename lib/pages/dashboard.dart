@@ -135,6 +135,91 @@ class DashboardPage extends StatelessWidget {
                       width: 3,
                     ),
                   ),
+                  child: Center(
+                    child: Column(
+                      children: [
+                        SizedBox(height: 45),
+                        Text(
+                          "First Name:",
+                          style: TextStyle(
+                            fontSize: 28,
+                            color: Color.fromARGB(255, 85, 214, 190),
+                            decoration: TextDecoration.none,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        Text(
+                          "[First Name]",
+                          style: TextStyle(
+                            fontSize: 32,
+                            color: Color.fromARGB(255, 85, 214, 190),
+                            decoration: TextDecoration.none,
+                          ),
+                        ),
+                        SizedBox(height: 35),
+                        Text(
+                          "Last Name:",
+                          style: TextStyle(
+                            fontSize: 28,
+                            color: Color.fromARGB(255, 85, 214, 190),
+                            decoration: TextDecoration.none,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        Text(
+                          "[Last Name]",
+                          style: TextStyle(
+                            fontSize: 32,
+                            color: Color.fromARGB(255, 85, 214, 190),
+                            decoration: TextDecoration.none,
+                          ),
+                        ),
+                        SizedBox(height: 35),
+                        Text(
+                          "Email:",
+                          style: TextStyle(
+                            fontSize: 28,
+                            color: Color.fromARGB(255, 85, 214, 190),
+                            decoration: TextDecoration.none,
+                            fontWeight: FontWeight.normal,
+                          ),
+                        ),
+                        Text(
+                          "[Email]",
+                          style: TextStyle(
+                            fontSize: 32,
+                            color: Color.fromARGB(255, 85, 214, 190),
+                            decoration: TextDecoration.none,
+                          ),
+                        ),
+                        SizedBox(height: 35),
+                        ElevatedButton(
+                            style: ElevatedButton.styleFrom(
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(12)),
+                                backgroundColor:
+                                    Color.fromARGB(255, 85, 214, 190)),
+                            onPressed: () {
+                              Navigator.pushReplacement(
+                                  context,
+                                  PageRouteBuilder(
+                                    pageBuilder:
+                                        (context, animation1, animation2) =>
+                                            Placeholder(),
+                                    transitionDuration: Duration.zero,
+                                    reverseTransitionDuration: Duration.zero,
+                                  ));
+                            },
+                            child: Text(
+                              'Edit Profile',
+                              style: TextStyle(
+                                  color: Color.fromARGB(255, 7, 57, 60),
+                                  fontSize: 28,
+                                  fontWeight: FontWeight.bold),
+                            ))
+                      ],
+                    ),
+                  ),
                 ),
                 Container(
                   padding: const EdgeInsets.all(8),
