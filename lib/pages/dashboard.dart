@@ -116,46 +116,62 @@ class DashboardPage extends StatelessWidget {
             ),
           ),
           Expanded(
+              child: Center(
             child: GridView.count(
               padding: EdgeInsets.all(20),
-              crossAxisCount: 3,
-              mainAxisSpacing: 10,
-              crossAxisSpacing: 10,
-              // Some dummy data took from online documentation
+              crossAxisCount: 4,
+              mainAxisSpacing: 50,
+              crossAxisSpacing: 50,
+              childAspectRatio: 0.9,
+              shrinkWrap: true,
               children: <Widget>[
                 Container(
                   padding: const EdgeInsets.all(8),
-                  color: Colors.teal[100],
-                  child: const Text("He'd have you all unravel at the"),
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 25, 25, 25),
+                    borderRadius: BorderRadius.circular(50),
+                    border: Border.all(
+                      color: Color.fromARGB(255, 85, 214, 190),
+                      width: 3,
+                    ),
+                  ),
                 ),
                 Container(
                   padding: const EdgeInsets.all(8),
-                  color: Colors.teal[200],
-                  child: const Text('Heed not the rabble'),
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 25, 25, 25),
+                    borderRadius: BorderRadius.circular(50),
+                    border: Border.all(
+                      color: Color.fromARGB(255, 85, 214, 190),
+                      width: 3,
+                    ),
+                  ),
                 ),
                 Container(
                   padding: const EdgeInsets.all(8),
-                  color: Colors.teal[300],
-                  child: const Text('Sound of screams but the'),
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 25, 25, 25),
+                    borderRadius: BorderRadius.circular(50),
+                    border: Border.all(
+                      color: Color.fromARGB(255, 85, 214, 190),
+                      width: 3,
+                    ),
+                  ),
                 ),
                 Container(
                   padding: const EdgeInsets.all(8),
-                  color: Colors.teal[400],
-                  child: const Text('Who scream'),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[500],
-                  child: const Text('Revolution is coming...'),
-                ),
-                Container(
-                  padding: const EdgeInsets.all(8),
-                  color: Colors.teal[600],
-                  child: const Text('Revolution, they...'),
+                  decoration: BoxDecoration(
+                    color: Color.fromARGB(255, 25, 25, 25),
+                    borderRadius: BorderRadius.circular(50),
+                    border: Border.all(
+                      color: Color.fromARGB(255, 85, 214, 190),
+                      width: 3,
+                    ),
+                  ),
                 ),
               ],
             ),
-          ),
+          )),
         ],
       ),
     );
