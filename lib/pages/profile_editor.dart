@@ -97,6 +97,29 @@ class EditProfilePage extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(height: 20),
+                ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(12)),
+                        backgroundColor: Color.fromARGB(255, 85, 214, 190)),
+                    onPressed: () {
+                      Navigator.pushReplacement(
+                          context,
+                          PageRouteBuilder(
+                            pageBuilder: (context, animation1, animation2) =>
+                                ProfileEditor(),
+                            transitionDuration: Duration.zero,
+                            reverseTransitionDuration: Duration.zero,
+                          ));
+                    },
+                    child: Text(
+                      'WIP',
+                      style: TextStyle(
+                          color: Color.fromARGB(255, 7, 57, 60),
+                          fontSize: 28,
+                          fontWeight: FontWeight.bold),
+                    ))
               ],
             ),
           ),
