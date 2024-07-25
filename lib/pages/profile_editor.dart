@@ -46,15 +46,23 @@ class EditProfilePage extends StatelessWidget {
           child: Center(
             child: Column(
               children: [
-                // Todo: Get user information to display here from db
-                InputLabelBlock(
-                  labelText: 'First Name',
-                  bodyText: 'Type your first name...',
-                ),
-                SizedBox(height: 20),
-                InputLabelBlock(
-                  labelText: 'Last Name',
-                  bodyText: 'Type your last name...',
+                // TODO: Get user information to display here from db
+                Row(
+                  children: [
+                    Expanded(
+                      child: InputLabelBlock(
+                        labelText: 'First Name',
+                        bodyText: 'Type your first name...',
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    Expanded(
+                      child: InputLabelBlock(
+                        labelText: 'Last Name',
+                        bodyText: 'Type your last name...',
+                      ),
+                    ),
+                  ],
                 ),
                 SizedBox(height: 20),
                 InputLabelBlock(
@@ -72,14 +80,22 @@ class EditProfilePage extends StatelessWidget {
                   bodyText: 'Type your phone number...',
                 ),
                 SizedBox(height: 20),
-                InputLabelBlock(
-                  labelText: 'Country',
-                  bodyText: 'Type your country...',
-                ),
-                SizedBox(height: 20),
-                InputLabelBlock(
-                  labelText: 'City',
-                  bodyText: 'Type your city...',
+                Row(
+                  children: [
+                    Expanded(
+                      child: InputLabelBlock(
+                        labelText: 'Country',
+                        bodyText: 'Type your country...',
+                      ),
+                    ),
+                    SizedBox(width: 20),
+                    Expanded(
+                      child: InputLabelBlock(
+                        labelText: 'City',
+                        bodyText: 'Type your city...',
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
