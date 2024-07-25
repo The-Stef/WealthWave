@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:wealthwave/pages/login_page.dart';
+import 'package:wealthwave/pages/profile_editor.dart';
 import 'package:wealthwave/pages/signup_page.dart';
 import 'package:wealthwave/pages/dashboard.dart';
 
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/': (context) => DashboardPage(),
+        '/': (context) => ProfileEditor(),
         '/signup': (context) => SignupPage(),
         '/dashboard': (context) => DashboardPage(),
         '/login': (context) => LoginPage(),
