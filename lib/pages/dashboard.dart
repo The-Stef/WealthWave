@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:wealthwave/pages/login_page.dart';
+import 'package:wealthwave/pages/profile_editor.dart';
 
 class DashboardPage extends StatelessWidget {
   const DashboardPage({super.key});
@@ -205,7 +206,7 @@ class DashboardPage extends StatelessWidget {
                                   PageRouteBuilder(
                                     pageBuilder:
                                         (context, animation1, animation2) =>
-                                            Placeholder(),
+                                            ProfileEditor(),
                                     transitionDuration: Duration.zero,
                                     reverseTransitionDuration: Duration.zero,
                                   ));
