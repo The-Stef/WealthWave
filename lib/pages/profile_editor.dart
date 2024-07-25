@@ -5,6 +5,7 @@ import 'package:wealthwave/pages/login_page.dart';
 
 const colorDark = Color.fromARGB(255, 25, 25, 25);
 const colorBright = Color.fromARGB(255, 85, 214, 190);
+const colorBlue = Color.fromARGB(255, 0, 102, 204);
 
 void main() {
   runApp(ProfileEditor());
@@ -29,14 +30,19 @@ class EditProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: colorDark,
-        title: Text(
-          'Edit Profile',
-          style: TextStyle(
-            color: colorBright,
-            fontSize: 32,
-            fontWeight: FontWeight.bold,
-          ),
+        backgroundColor: colorBlue,
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: colorBright),
+          onPressed: () {
+            Navigator.pushReplacement(
+              context,
+              PageRouteBuilder(
+                pageBuilder: (context, animation1, animation2) => LoginPage(),
+                transitionDuration: Duration.zero,
+                reverseTransitionDuration: Duration.zero,
+              ),
+            );
+          },
         ),
       ),
       body: Container(
@@ -48,6 +54,16 @@ class EditProfilePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Text(
+                  "Edit Profile Information",
+                  style: TextStyle(
+                    color: colorBright,
+                    fontSize: 42,
+                    fontWeight: FontWeight.bold,
+                    decoration: TextDecoration.none,
+                  ),
+                ),
+                SizedBox(height: 20),
                 // TODO: Get user information to display here from db
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
