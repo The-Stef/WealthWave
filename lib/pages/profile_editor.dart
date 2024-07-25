@@ -1,10 +1,10 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
 import 'package:wealthwave/pages/login_page.dart';
 
-const backgroundColor = Color.fromARGB(255, 25, 25, 25);
-const textColor = Color.fromARGB(255, 85, 214, 190);
+const colorDark = Color.fromARGB(255, 25, 25, 25);
+const colorBright = Color.fromARGB(255, 85, 214, 190);
 
 void main() {
   runApp(ProfileEditor());
@@ -29,34 +29,40 @@ class EditProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: backgroundColor,
+        backgroundColor: colorDark,
         title: Text(
           'Edit Profile',
           style: TextStyle(
-            color: textColor,
+            color: colorBright,
             fontSize: 32,
             fontWeight: FontWeight.bold,
           ),
         ),
       ),
       body: Container(
-        color: backgroundColor,
-        child: Padding(
-          padding: EdgeInsets.all(16),
-          child: Center(
+        color: colorDark,
+        child: Center(
+          child: Padding(
+            padding: EdgeInsets.all(16),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // TODO: Get user information to display here from db
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Expanded(
+                    Container(
+                      width: 500,
                       child: InputLabelBlock(
                         labelText: 'First Name',
                         bodyText: 'Type your first name...',
                       ),
                     ),
                     SizedBox(width: 20),
-                    Expanded(
+                    Container(
+                      width: 500,
                       child: InputLabelBlock(
                         labelText: 'Last Name',
                         bodyText: 'Type your last name...',
@@ -65,31 +71,45 @@ class EditProfilePage extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: 20),
-                InputLabelBlock(
-                  labelText: 'Email',
-                  bodyText: 'Type your email...',
+                Container(
+                  width: 1020,
+                  child: InputLabelBlock(
+                    labelText: 'Email',
+                    bodyText: 'Type your email...',
+                  ),
                 ),
                 SizedBox(height: 20),
-                InputLabelBlock(
-                  labelText: 'Address',
-                  bodyText: 'Type your address...',
+                Container(
+                  width: 1020,
+                  child: InputLabelBlock(
+                    labelText: 'Address',
+                    bodyText: 'Type your address...',
+                  ),
                 ),
                 SizedBox(height: 20),
-                InputLabelBlock(
-                  labelText: 'Phone Number',
-                  bodyText: 'Type your phone number...',
+                Container(
+                  width: 1020,
+                  child: InputLabelBlock(
+                    labelText: 'Phone Number',
+                    bodyText: 'Type your phone number...',
+                  ),
                 ),
+
                 SizedBox(height: 20),
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Expanded(
+                    Container(
+                      width: 500,
                       child: InputLabelBlock(
                         labelText: 'Country',
                         bodyText: 'Type your country...',
                       ),
                     ),
                     SizedBox(width: 20),
-                    Expanded(
+                    Container(
+                      width: 500,
                       child: InputLabelBlock(
                         labelText: 'City',
                         bodyText: 'Type your city...',
@@ -102,7 +122,7 @@ class EditProfilePage extends StatelessWidget {
                     style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(12)),
-                        backgroundColor: Color.fromARGB(255, 85, 214, 190)),
+                        backgroundColor: colorBright),
                     onPressed: () {
                       Navigator.pushReplacement(
                           context,
@@ -114,10 +134,10 @@ class EditProfilePage extends StatelessWidget {
                           ));
                     },
                     child: Text(
-                      'WIP',
+                      'Save',
                       style: TextStyle(
-                          color: Color.fromARGB(255, 7, 57, 60),
-                          fontSize: 28,
+                          color: colorDark,
+                          fontSize: 32,
                           fontWeight: FontWeight.bold),
                     ))
               ],
